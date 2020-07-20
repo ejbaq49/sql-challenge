@@ -87,5 +87,24 @@ from employees
 group by last_name
 order by frequency desc 
 
+-- BONUS plot average salary by title
+create view vw_avg_salary_by_title as
+(
+select
+	t.title,
+	round(avg(s.salary), 0) as average_salary
+from employees as e
+	inner join titles as t
+		on e.emp_title_id = t.title_id
+	inner join salaries as s
+		on e.emp_no = s.emp_no
+group by t.title
+order by average_salary desc 
+)
 
+-- test new view
+select * from vw_avg_salary_by_title
+
+-- BONUS: who am I?  Employee 499942 (also found in jupyter notebook)
+select * from employees where emp_no = 499942
 
