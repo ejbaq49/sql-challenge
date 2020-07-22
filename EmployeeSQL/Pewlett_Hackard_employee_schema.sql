@@ -1,7 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
--- Link to schema: https://app.quickdatabasediagrams.com/#/d/0kEV8C
--- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
+-- sql-challenge schema creation
 
 CREATE TABLE "employees" (
     "emp_no" int   NOT NULL,
